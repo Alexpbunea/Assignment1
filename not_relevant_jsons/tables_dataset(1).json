@@ -1,0 +1,879 @@
+[
+ {
+  "db_id": "european_football_1",
+  "tables": [
+   "divisions",
+   "matchs"
+  ]
+ },
+ {
+  "db_id": "sales_in_weather",
+  "tables": [
+   "sales_in_weather",
+   "weather",
+   "relation"
+  ]
+ },
+ {
+  "db_id": "craftbeer",
+  "tables": [
+   "breweries",
+   "beers"
+  ]
+ },
+ {
+  "db_id": "soccer_2016",
+  "tables": [
+   "Batting_Style",
+   "Bowling_Style",
+   "City",
+   "Country",
+   "Extra_Type",
+   "Extra_Runs",
+   "Out_Type",
+   "Outcome",
+   "Player",
+   "Rolee",
+   "Season",
+   "Team",
+   "Toss_Decision",
+   "Umpire",
+   "Venue",
+   "Win_By",
+   "Match",
+   "Ball_by_Ball",
+   "Batsman_Scored",
+   "Player_Match",
+   "Wicket_Taken"
+  ]
+ },
+ {
+  "db_id": "restaurant",
+  "tables": [
+   "geographic",
+   "generalinfo",
+   "location"
+  ]
+ },
+ {
+  "db_id": "movie",
+  "tables": [
+   "actor",
+   "movie",
+   "characters"
+  ]
+ },
+ {
+  "db_id": "olympics",
+  "tables": [
+   "city",
+   "games",
+   "games_city",
+   "medal",
+   "noc_region",
+   "person",
+   "games_competitor",
+   "person_region",
+   "sport",
+   "event",
+   "competitor_event"
+  ]
+ },
+ {
+  "db_id": "language_corpus",
+  "tables": [
+   "langs",
+   "sqlite_sequence",
+   "pages",
+   "words",
+   "langs_words",
+   "pages_words",
+   "biwords"
+  ]
+ },
+ {
+  "db_id": "app_store",
+  "tables": [
+   "playstore",
+   "user_reviews"
+  ]
+ },
+ {
+  "db_id": "sales",
+  "tables": [
+   "Customers",
+   "Employees",
+   "Products",
+   "Sales"
+  ]
+ },
+ {
+  "db_id": "video_games",
+  "tables": [
+   "genre",
+   "game",
+   "platform",
+   "publisher",
+   "game_publisher",
+   "game_platform",
+   "region",
+   "region_sales"
+  ]
+ },
+ {
+  "db_id": "image_and_language",
+  "tables": [
+   "ATT_CLASSES",
+   "OBJ_CLASSES",
+   "IMG_OBJ",
+   "IMG_OBJ_ATT",
+   "PRED_CLASSES",
+   "IMG_REL"
+  ]
+ },
+ {
+  "db_id": "software_company",
+  "tables": [
+   "Demog",
+   "mailings3",
+   "Customers",
+   "Mailings1_2",
+   "Sales"
+  ]
+ },
+ {
+  "db_id": "authors",
+  "tables": [
+   "Author",
+   "Conference",
+   "Journal",
+   "Paper",
+   "PaperAuthor"
+  ]
+ },
+ {
+  "db_id": "movies_4",
+  "tables": [
+   "country",
+   "department",
+   "gender",
+   "genre",
+   "keyword",
+   "language",
+   "language_role",
+   "movie",
+   "movie_genres",
+   "movie_languages",
+   "person",
+   "movie_crew",
+   "production_company",
+   "production_country",
+   "movie_cast",
+   "movie_keywords",
+   "movie_company"
+  ]
+ },
+ {
+  "db_id": "social_media",
+  "tables": [
+   "location",
+   "user",
+   "twitter"
+  ]
+ },
+ {
+  "db_id": "human_resources",
+  "tables": [
+   "location",
+   "position",
+   "employee"
+  ]
+ },
+ {
+  "db_id": "regional_sales",
+  "tables": [
+   "Customers",
+   "Products",
+   "Regions",
+   "Sales Team",
+   "Store Locations",
+   "Sales Orders"
+  ]
+ },
+ {
+  "db_id": "computer_student",
+  "tables": [
+   "course",
+   "person",
+   "advisedBy",
+   "taughtBy"
+  ]
+ },
+ {
+  "db_id": "works_cycles",
+  "tables": [
+   "sqlite_sequence",
+   "CountryRegion",
+   "Culture",
+   "Currency",
+   "CountryRegionCurrency",
+   "Person",
+   "BusinessEntityContact",
+   "EmailAddress",
+   "Employee",
+   "Password",
+   "PersonCreditCard",
+   "ProductCategory",
+   "ProductDescription",
+   "ProductModel",
+   "ProductModelProductDescriptionCulture",
+   "ProductPhoto",
+   "ProductSubcategory",
+   "SalesReason",
+   "SalesTerritory",
+   "SalesPerson",
+   "SalesPersonQuotaHistory",
+   "SalesTerritoryHistory",
+   "ScrapReason",
+   "Shift",
+   "ShipMethod",
+   "SpecialOffer",
+   "BusinessEntityAddress",
+   "SalesTaxRate",
+   "Store",
+   "SalesOrderHeaderSalesReason",
+   "TransactionHistoryArchive",
+   "UnitMeasure",
+   "ProductCostHistory",
+   "ProductDocument",
+   "ProductInventory",
+   "ProductProductPhoto",
+   "ProductReview",
+   "ShoppingCartItem",
+   "SpecialOfferProduct",
+   "SalesOrderDetail",
+   "TransactionHistory",
+   "Vendor",
+   "ProductVendor",
+   "PurchaseOrderHeader",
+   "PurchaseOrderDetail",
+   "WorkOrder",
+   "WorkOrderRouting",
+   "Customer",
+   "ProductListPriceHistory",
+   "Address",
+   "AddressType",
+   "BillOfMaterials",
+   "BusinessEntity",
+   "ContactType",
+   "CurrencyRate",
+   "Department",
+   "EmployeeDepartmentHistory",
+   "EmployeePayHistory",
+   "JobCandidate",
+   "Location",
+   "PhoneNumberType",
+   "Product",
+   "Document",
+   "StateProvince",
+   "CreditCard",
+   "SalesOrderHeader"
+  ]
+ },
+ {
+  "db_id": "food_inspection_2",
+  "tables": [
+   "employee",
+   "establishment",
+   "inspection",
+   "inspection_point",
+   "violation"
+  ]
+ },
+ {
+  "db_id": "citeseer",
+  "tables": [
+   "cites",
+   "paper",
+   "content"
+  ]
+ },
+ {
+  "db_id": "bike_share_1",
+  "tables": [
+   "station",
+   "status",
+   "trip",
+   "weather"
+  ]
+ },
+ {
+  "db_id": "law_episode",
+  "tables": [
+   "Episode",
+   "Keyword",
+   "Person",
+   "Award",
+   "Credit",
+   "Vote"
+  ]
+ },
+ {
+  "db_id": "cs_semester",
+  "tables": [
+   "course",
+   "prof",
+   "RA",
+   "registration",
+   "student"
+  ]
+ },
+ {
+  "db_id": "legislator",
+  "tables": [
+   "current",
+   "current-terms",
+   "historical",
+   "historical-terms",
+   "social-media"
+  ]
+ },
+ {
+  "db_id": "world",
+  "tables": [
+   "sqlite_sequence",
+   "City",
+   "Country",
+   "CountryLanguage"
+  ]
+ },
+ {
+  "db_id": "cookbook",
+  "tables": [
+   "Ingredient",
+   "Recipe",
+   "Nutrition",
+   "Quantity"
+  ]
+ },
+ {
+  "db_id": "university",
+  "tables": [
+   "country",
+   "ranking_system",
+   "ranking_criteria",
+   "university",
+   "university_ranking_year",
+   "university_year"
+  ]
+ },
+ {
+  "db_id": "books",
+  "tables": [
+   "address_status",
+   "author",
+   "book_language",
+   "country",
+   "address",
+   "customer",
+   "customer_address",
+   "order_status",
+   "publisher",
+   "book",
+   "book_author",
+   "shipping_method",
+   "cust_order",
+   "sqlite_sequence",
+   "order_history",
+   "order_line"
+  ]
+ },
+ {
+  "db_id": "shipping",
+  "tables": [
+   "city",
+   "customer",
+   "driver",
+   "truck",
+   "shipment"
+  ]
+ },
+ {
+  "db_id": "food_inspection",
+  "tables": [
+   "businesses",
+   "inspections",
+   "violations"
+  ]
+ },
+ {
+  "db_id": "movie_platform",
+  "tables": [
+   "lists",
+   "movies",
+   "ratings_users",
+   "lists_users",
+   "ratings"
+  ]
+ },
+ {
+  "db_id": "shakespeare",
+  "tables": [
+   "chapters",
+   "sqlite_sequence",
+   "characters",
+   "paragraphs",
+   "works"
+  ]
+ },
+ {
+  "db_id": "book_publishing_company",
+  "tables": [
+   "authors",
+   "jobs",
+   "publishers",
+   "employee",
+   "pub_info",
+   "stores",
+   "discounts",
+   "titles",
+   "roysched",
+   "sales",
+   "titleauthor"
+  ]
+ },
+ {
+  "db_id": "car_retails",
+  "tables": [
+   "offices",
+   "employees",
+   "customers",
+   "orders",
+   "payments",
+   "productlines",
+   "products",
+   "orderdetails"
+  ]
+ },
+ {
+  "db_id": "mental_health_survey",
+  "tables": [
+   "Question",
+   "Survey",
+   "Answer"
+  ]
+ },
+ {
+  "db_id": "hockey",
+  "tables": [
+   "AwardsMisc",
+   "HOF",
+   "Teams",
+   "Coaches",
+   "AwardsCoaches",
+   "Master",
+   "AwardsPlayers",
+   "CombinedShutouts",
+   "Goalies",
+   "GoaliesSC",
+   "GoaliesShootout",
+   "Scoring",
+   "ScoringSC",
+   "ScoringShootout",
+   "ScoringSup",
+   "SeriesPost",
+   "TeamSplits",
+   "TeamVsTeam",
+   "TeamsHalf",
+   "TeamsPost",
+   "TeamsSC",
+   "abbrev"
+  ]
+ },
+ {
+  "db_id": "music_platform_2",
+  "tables": [
+   "runs",
+   "podcasts",
+   "reviews",
+   "categories"
+  ]
+ },
+ {
+  "db_id": "address",
+  "tables": [
+   "CBSA",
+   "state",
+   "congress",
+   "zip_data",
+   "alias",
+   "area_code",
+   "avoid",
+   "country",
+   "zip_congress"
+  ]
+ },
+ {
+  "db_id": "menu",
+  "tables": [
+   "Dish",
+   "Menu",
+   "MenuPage",
+   "MenuItem"
+  ]
+ },
+ {
+  "db_id": "professional_basketball",
+  "tables": [
+   "awards_players",
+   "coaches",
+   "draft",
+   "player_allstar",
+   "players",
+   "teams",
+   "awards_coaches",
+   "sqlite_sequence",
+   "players_teams",
+   "series_post"
+  ]
+ },
+ {
+  "db_id": "cars",
+  "tables": [
+   "country",
+   "price",
+   "data",
+   "production"
+  ]
+ },
+ {
+  "db_id": "synthea",
+  "tables": [
+   "all_prevalences",
+   "patients",
+   "encounters",
+   "allergies",
+   "careplans",
+   "conditions",
+   "immunizations",
+   "medications",
+   "observations",
+   "procedures",
+   "claims"
+  ]
+ },
+ {
+  "db_id": "genes",
+  "tables": [
+   "Classification",
+   "Genes",
+   "Interactions"
+  ]
+ },
+ {
+  "db_id": "retails",
+  "tables": [
+   "customer",
+   "lineitem",
+   "nation",
+   "orders",
+   "part",
+   "partsupp",
+   "region",
+   "supplier"
+  ]
+ },
+ {
+  "db_id": "talkingdata",
+  "tables": [
+   "app_all",
+   "app_events",
+   "app_events_relevant",
+   "app_labels",
+   "events",
+   "events_relevant",
+   "gender_age",
+   "gender_age_test",
+   "gender_age_train",
+   "label_categories",
+   "phone_brand_device_model2",
+   "sample_submission"
+  ]
+ },
+ {
+  "db_id": "beer_factory",
+  "tables": [
+   "customers",
+   "geolocation",
+   "location",
+   "rootbeerbrand",
+   "rootbeer",
+   "rootbeerreview",
+   "transaction"
+  ]
+ },
+ {
+  "db_id": "chicago_crime",
+  "tables": [
+   "Community_Area",
+   "District",
+   "FBI_Code",
+   "IUCR",
+   "Neighborhood",
+   "Ward",
+   "Crime"
+  ]
+ },
+ {
+  "db_id": "mondial_geo",
+  "tables": [
+   "borders",
+   "city",
+   "continent",
+   "country",
+   "desert",
+   "economy",
+   "encompasses",
+   "ethnicGroup",
+   "geo_desert",
+   "geo_estuary",
+   "geo_island",
+   "geo_lake",
+   "geo_mountain",
+   "geo_river",
+   "geo_sea",
+   "geo_source",
+   "island",
+   "islandIn",
+   "isMember",
+   "lake",
+   "language",
+   "located",
+   "locatedOn",
+   "mergesWith",
+   "mountain",
+   "mountainOnIsland",
+   "organization",
+   "politics",
+   "population",
+   "province",
+   "religion",
+   "river",
+   "sea",
+   "target"
+  ]
+ },
+ {
+  "db_id": "student_loan",
+  "tables": [
+   "bool",
+   "person",
+   "disabled",
+   "enlist",
+   "filed_for_bankrupcy",
+   "longest_absense_from_school",
+   "male",
+   "no_payment_due",
+   "unemployed",
+   "enrolled"
+  ]
+ },
+ {
+  "db_id": "codebase_comments",
+  "tables": [
+   "sqlite_sequence",
+   "Method",
+   "MethodParameter",
+   "Repo",
+   "Solution"
+  ]
+ },
+ {
+  "db_id": "retail_world",
+  "tables": [
+   "sqlite_sequence",
+   "Categories",
+   "Customers",
+   "Employees",
+   "Shippers",
+   "Suppliers",
+   "Products",
+   "Orders",
+   "OrderDetails"
+  ]
+ },
+ {
+  "db_id": "music_tracker",
+  "tables": [
+   "torrents",
+   "tags"
+  ]
+ },
+ {
+  "db_id": "disney",
+  "tables": [
+   "characters",
+   "director",
+   "movies_total_gross",
+   "revenue",
+   "voice-actors"
+  ]
+ },
+ {
+  "db_id": "college_completion",
+  "tables": [
+   "institution_details",
+   "institution_grads",
+   "state_sector_grads",
+   "state_sector_details"
+  ]
+ },
+ {
+  "db_id": "ice_hockey_draft",
+  "tables": [
+   "height_info",
+   "weight_info",
+   "PlayerInfo",
+   "SeasonStatus"
+  ]
+ },
+ {
+  "db_id": "world_development_indicators",
+  "tables": [
+   "Country",
+   "Series",
+   "CountryNotes",
+   "Footnotes",
+   "Indicators",
+   "SeriesNotes"
+  ]
+ },
+ {
+  "db_id": "airline",
+  "tables": [
+   "Air Carriers",
+   "Airports",
+   "Airlines"
+  ]
+ },
+ {
+  "db_id": "retail_complains",
+  "tables": [
+   "state",
+   "callcenterlogs",
+   "client",
+   "district",
+   "events",
+   "reviews"
+  ]
+ },
+ {
+  "db_id": "trains",
+  "tables": [
+   "cars",
+   "trains"
+  ]
+ },
+ {
+  "db_id": "public_review_platform",
+  "tables": [
+   "Attributes",
+   "Categories",
+   "Compliments",
+   "Days",
+   "Years",
+   "Business_Attributes",
+   "Business_Categories",
+   "Business_Hours",
+   "Checkins",
+   "Elite",
+   "Reviews",
+   "Tips",
+   "Users_Compliments",
+   "Business",
+   "Users"
+  ]
+ },
+ {
+  "db_id": "donor",
+  "tables": [
+   "sqlite_sequence",
+   "essays",
+   "projects",
+   "donations",
+   "resources"
+  ]
+ },
+ {
+  "db_id": "coinmarketcap",
+  "tables": [
+   "coins",
+   "historical"
+  ]
+ },
+ {
+  "db_id": "simpson_episodes",
+  "tables": [
+   "Episode",
+   "Person",
+   "Award",
+   "Character_Award",
+   "Credit",
+   "Keyword",
+   "Vote"
+  ]
+ },
+ {
+  "db_id": "movie_3",
+  "tables": [
+   "film_text",
+   "actor",
+   "sqlite_sequence",
+   "address",
+   "category",
+   "city",
+   "country",
+   "customer",
+   "film",
+   "film_actor",
+   "film_category",
+   "inventory",
+   "language",
+   "payment",
+   "rental",
+   "staff",
+   "store"
+  ]
+ },
+ {
+  "db_id": "shooting",
+  "tables": [
+   "incidents",
+   "officers",
+   "subjects"
+  ]
+ },
+ {
+  "db_id": "superstore",
+  "tables": [
+   "people",
+   "product",
+   "central_superstore",
+   "east_superstore",
+   "south_superstore",
+   "west_superstore"
+  ]
+ },
+ {
+  "db_id": "movielens",
+  "tables": [
+   "users",
+   "directors",
+   "actors",
+   "movies",
+   "movies2actors",
+   "movies2directors",
+   "u2base"
+  ]
+ }
+]

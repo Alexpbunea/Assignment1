@@ -1,0 +1,136 @@
+[
+ {
+  "db_id": "debit_card_specializing",
+  "tables": [
+   "customers",
+   "gasstations",
+   "products",
+   "transactions_1k",
+   "sqlite_sequence",
+   "yearmonth"
+  ]
+ },
+ {
+  "db_id": "financial",
+  "tables": [
+   "account",
+   "card",
+   "client",
+   "disp",
+   "district",
+   "loan",
+   "order",
+   "trans"
+  ]
+ },
+ {
+  "db_id": "formula_1",
+  "tables": [
+   "sqlite_sequence",
+   "circuits",
+   "constructors",
+   "drivers",
+   "seasons",
+   "races",
+   "constructorResults",
+   "constructorStandings",
+   "driverStandings",
+   "lapTimes",
+   "pitStops",
+   "qualifying",
+   "status",
+   "results"
+  ]
+ },
+ {
+  "db_id": "california_schools",
+  "tables": [
+   "frpm",
+   "satscores",
+   "schools"
+  ]
+ },
+ {
+  "db_id": "card_games",
+  "tables": [
+   "sqlite_sequence",
+   "cards",
+   "foreign_data",
+   "legalities",
+   "sets",
+   "set_translations",
+   "rulings"
+  ]
+ },
+ {
+  "db_id": "european_football_2",
+  "tables": [
+   "sqlite_sequence",
+   "Player_Attributes",
+   "Player",
+   "League",
+   "Country",
+   "Team",
+   "Team_Attributes",
+   "Match"
+  ]
+ },
+ {
+  "db_id": "thrombosis_prediction",
+  "tables": [
+   "Examination",
+   "Patient",
+   "Laboratory"
+  ]
+ },
+ {
+  "db_id": "toxicology",
+  "tables": [
+   "atom",
+   "bond",
+   "connected",
+   "molecule"
+  ]
+ },
+ {
+  "db_id": "student_club",
+  "tables": [
+   "event",
+   "major",
+   "zip_code",
+   "attendance",
+   "budget",
+   "expense",
+   "income",
+   "member"
+  ]
+ },
+ {
+  "db_id": "superhero",
+  "tables": [
+   "alignment",
+   "attribute",
+   "colour",
+   "gender",
+   "publisher",
+   "race",
+   "superhero",
+   "hero_attribute",
+   "superpower",
+   "hero_power"
+  ]
+ },
+ {
+  "db_id": "codebase_community",
+  "tables": [
+   "badges",
+   "comments",
+   "postHistory",
+   "postLinks",
+   "posts",
+   "tags",
+   "users",
+   "votes"
+  ]
+ }
+]
