@@ -1,0 +1,38 @@
+5 - {'train_runtime': 1828.1118, 'train_samples_per_second': 15.472, 'train_steps_per_second': 1.933, 'train_loss': 1.1767042469829911, 'epoch': 3.0}   
+
+(venv) alexpbunea@fedora:~/Desktop/assignment1$ python run.py --action "generate"
+[DISCLAIMER]: Please be sure to have the model downloaded and fine-tuned before running this. If not, several errors may occur. Also, please be sure to have the correct paths for the jsonl files.
+Default path for the jsonl file for the inputs: ./jsons/dev_dataset.jsonl ; Do you want to change it? (y/n) ------- [Note]: If you don't have the JONSL, please check the 'generated_output' function on the run.py script.
+n
+Default path for the final jsonl file with the inputs with the outputs: ./final_output.jsonl ; Do you want to change it? (y/n)
+n
+Default path for the model's saved weights:  ./fine_tuned_t5_small ; Do you want to change it? (y/n)
+n
+
+Generating outputs...
+Outputs generated successfully.
+Refining the results...
+
+Finished!
+(venv) alexpbunea@fedora:~/Desktop/assignment1$ python run.py --action "evaluate"
+Performing evaluation...
+Default path for the jsonl file: ./final_output.jsonl ; Do you want to change it? (y/n)
+n
+Default path for the groundtruth jsonl file: ./jsons/dev_dataset.jsonl ; Do you want to change it? (y/n)
+n
+Calculating the metrics...
+Accuracy: 0.5816601477618454
+Precision: 0.7112906225918735
+Recall: 0.9576588018532098
+F1-score: 0.8162904344776581
+(venv) alexpbunea@fedora:~/Desktop/assignment1$ python run.py --action "evaluate"
+Performing evaluation...
+Default path for the jsonl file: ./final_output_baseT5model.jsonl ; Do you want to change it? (y/n)
+n
+Default path for the groundtruth jsonl file: ./jsons/dev_dataset.jsonl ; Do you want to change it? (y/n)
+n
+Calculating the metrics...
+Accuracy: 0.6950021729682786
+Precision: 0.7822152657193863
+Recall: 0.980127173829771
+F1-score: 0.8700584182858072
