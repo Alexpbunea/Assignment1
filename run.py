@@ -21,7 +21,7 @@ questions = "./dev/dev.json"
 json_path = "./jsons/dev_dataset.jsonl"
 model_saved_weights = "./fine_tuned_t5_small"
 raw_generated_outputs_path = "./raw_generated_outputs.jsonl"
-results_path = "./final_output_baseT5model.jsonl"#"./final_output.jsonl"
+results_path = "./final_output.jsonl"
 
 groundtruth_path = "./jsons/dev_dataset.jsonl"
 
@@ -44,7 +44,8 @@ def first_question():
         match answer:
             case "1":
                 print("You have chosen to train the model based on your databases.")
-                #return 1
+                train()
+                sys.exit()
             case "2":
                 print("You have chosen to use your model to generate new outputs.")
                 generate_output()
@@ -59,7 +60,7 @@ def first_question():
             case _:
                 print("Invalid option. Please choose again.\n")
 
-def train_model():
+def train():
     #For training the model, you can select between 2 jsonl files. I tried to train the model with two different m-schemas. A more complex one containing not only
     #the tables and the id, but also the columns and a few examples, called "dataset_complicated.jsonl". But, by the model being so small, the results are not good at all. That's why, I came up with the idea
     #of making the schema the simple and direct as posible. It can be found in the jsons directory, the "train_dataset.jsonl" file.
@@ -70,7 +71,8 @@ def train_model():
     if answer is True:
         print("Please enter the path: ")
         train_dataset_path = input()
-    train_model(train_dataset_path)
+    print("Training the model...")
+    training_model(train_dataset_path)
 
 
 def generate_output():
@@ -190,10 +192,12 @@ def evaluate_model():
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate the model's outputs.")
-    parser.add_argument("--action", type=str, choices=["generate", "evaluate", "other"], default="other", help="Action to perform (evaluate or other).")
+    parser.add_argument("--action", type=str, choices=["train", "generate", "evaluate", "other"], default="other", help="Action to perform (evaluate or other).")
     args = parser.parse_args()
     
-    if args.action == "generate":
+    if args.action == "train":
+        train()
+    elif args.action == "generate":
         generate_output()
     elif args.action == "evaluate":
         print("Performing evaluation...")
