@@ -27,6 +27,30 @@ groundtruth_path = "./jsons/dev_dataset.jsonl"
 
 
 
+def install_requirements():
+    try:
+        import pkg_resources
+        import subprocess
+        requirements = open("requirements.txt").read().splitlines()
+        missing_packages = []
+
+        for package in requirements:
+            try:
+                pkg_resources.require(package)
+            except pkg_resources.DistributionNotFound:
+                missing_packages.append(package)
+
+        if missing_packages:
+            print(f"Installing missing packages: {', '.join(missing_packages)}")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", *missing_packages])
+        else:
+            print("All packages are already installed!")
+
+        print()
+        
+    except Exception as e:
+        print(f"[ERROR]: When checking packages: {e}")
+        sys.exit()
 
 
 def first_question():
@@ -191,6 +215,9 @@ def evaluate_model():
 
 
 def main():
+    #checking every needed packeage is installed. If not, is installed.
+    install_requirements()
+
     parser = argparse.ArgumentParser(description="Evaluate the model's outputs.")
     parser.add_argument("--action", type=str, choices=["train", "generate", "evaluate", "other"], default="other", help="Action to perform (evaluate or other).")
     args = parser.parse_args()
