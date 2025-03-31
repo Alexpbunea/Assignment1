@@ -3,6 +3,15 @@ from utils import *
 
 #file_path = "./final_output.jsonl" #output of the model
 #file_path2 = "./jsons/dev_dataset.jsonl" #groundtruth
+
+"""
+When evaluating I treat several cases to evaluate good results: (model == groundtruth)
+- Perfect example: ["schools", "satscores"] == ["schools", "satscores"]. Acurracy_sum += 1
+- Almost perfect: ["schools"] == ["schools", "satscores"]. In this case, acurracy_sum += 0.5 and false_negative += 0.5
+- Almost perfect 2: ["schools", "satscores", "rpfm"] == ["schools", "satscores"]. In this case, acurracy_sum += 0.66 and false_positive += 0.33
+"""
+
+
 def evaluate(file_path, file_path2):
     a = load_json(file_path2)
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -48,7 +57,6 @@ def evaluate(file_path, file_path2):
     #print("Número total de muestras:", b)
     #print("Contador perfectos:", perfect_examples)
     #print("Suma parcial recall:", true_positives)
-
 
     accuracy = accuracy_sum / b
     precision = (perfect_examples + true_positives) / (perfect_examples + true_positives + false_positives) if (perfect_examples + true_positives + false_positives) > 0 else 0

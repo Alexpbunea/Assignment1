@@ -4,15 +4,6 @@ import json
 from utils import *
 
 def extract_tables_from_sqlite(sqlite_path):
-    """
-    Extrae solo los nombres de las tablas de un archivo SQLite.
-
-    Args:
-        sqlite_path (str): Ruta del archivo SQLite.
-
-    Returns:
-        dict: Diccionario con los nombres de las tablas extraídas.
-    """
     tables = []
 
     conn = sqlite3.connect(sqlite_path)

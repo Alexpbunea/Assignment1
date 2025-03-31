@@ -4,30 +4,32 @@ import sqlite3
 import json
 import argparse
 import time
-from training_file import *
-from m_schema import *
-from utils import *
-from generating import *
-from metrics import *
-from refining import *
 
-# Carpeta que contiene los directorios de bases de datos
-folder = "./dev/dev_databases/dev_databases/"
-output_directory = "./jsons/"
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'scripts')))
+from scripts.training_file import *
+from scripts.m_schema import *
+from scripts.utils import *
+from scripts.generating import *
+from scripts.metrics import *
+from scripts.refining import *
+
+
+folder = "./dev/dev_databases/dev_databases/" #Databases inital folder
+output_directory = "./jsons/" #for the jsons
 
 train_dataset_path = "./jsons/train_dataset.jsonl"
 
-questions = "./dev/dev.json"
-json_path = "./jsons/dev_dataset.jsonl"
+questions = "./dev/dev.json" #natural lenguaje questions
+json_path = "./jsons/dev_dataset.jsonl" #jsonl file with the input used for generation and the ouput used for calculating metrics
 model_saved_weights = "./fine_tuned_t5_small"
-raw_generated_outputs_path = "./raw_generated_outputs.jsonl"
-results_path = "./final_output.jsonl"
+raw_generated_outputs_path = "./generated_jsons/raw_generated_outputs.jsonl" #raw outputs, without refining
+results_path = "./generated_jsons/final_output.jsonl" #final outputs with the hybrid approach
 
-groundtruth_path = "./jsons/dev_dataset.jsonl"
+groundtruth_path = "./jsons/dev_dataset.jsonl" #the same as the json_path, for the reason I explained
 
 
 
-def install_requirements():
+def install_requirements(): #checks if the requiermentes are installed or not. If not, it installs them using pip
     try:
         import pkg_resources
         import subprocess
@@ -47,7 +49,7 @@ def install_requirements():
             print("All packages are already installed!")
 
         print()
-        
+
     except Exception as e:
         print(f"[ERROR]: When checking packages: {e}")
         sys.exit()
@@ -88,6 +90,20 @@ def train():
     #For training the model, you can select between 2 jsonl files. I tried to train the model with two different m-schemas. A more complex one containing not only
     #the tables and the id, but also the columns and a few examples, called "dataset_complicated.jsonl". But, by the model being so small, the results are not good at all. That's why, I came up with the idea
     #of making the schema the simple and direct as posible. It can be found in the jsons directory, the "train_dataset.jsonl" file.
+
+    """
+    #CODE I USED TO GENERATE THE TRAINING DATASET. IT HAS MORE OR LESS THE SAME PHYLOSOPHY AS THE ONE USED FOR CREATING dev_dataset.jsonl, EXPLAINED BELOW
+
+    questions_sql = load_json("./jsons/train.json")
+    m_schema_dataset = load_json("./jsons/tables_dataset(1).json")
+
+    #m_schema_dataset = create_tables_dataset(folder)
+    merged_dataset = merge_datasets(m_schema_dataset, questions_sql)
+    #write_json(output_directory, "train_dataset.json", merged_dataset) #writing the json file using the function from utils.py
+    jsonl_file = create_structure_for_jsonl_file(merged_dataset)
+    write_json(output_directory, "train_dataset.jsonl", jsonl_file) #writing the jsonl file using the function from utils.py
+    #"""
+
     global train_dataset_path
     print("[DISCLAIMER]: This will download the Google t5 small model. If you want a different one, please check the training_file.py file. Also, please be sure to have the correct path for the jsonl file.")
     print(f"Default path for the jsonl file of the dataset: {train_dataset_path} ; Do you want to change it? (y/n)" )
@@ -99,7 +115,7 @@ def train():
     training_model(train_dataset_path)
 
 
-def generate_output():
+def generate_output(): #generates the output and refines it automatically. However, for comparison puporses, two files are stored, a raw one and a refined one.
     global json_path
     global results_path
     global model_saved_weights
@@ -188,7 +204,7 @@ def generate_output():
 
 
 
-def evaluate_model():
+def evaluate_model(): #evaluates the metrics
     global results_path
     global groundtruth_path
     print(f"Default path for the jsonl file: {results_path} ; Do you want to change it? (y/n)")
@@ -218,6 +234,7 @@ def main():
     #checking every needed packeage is installed. If not, is installed.
     install_requirements()
 
+    #just in case, direct and quickly initialization is needed.
     parser = argparse.ArgumentParser(description="Evaluate the model's outputs.")
     parser.add_argument("--action", type=str, choices=["train", "generate", "evaluate", "other"], default="other", help="Action to perform (evaluate or other).")
     args = parser.parse_args()

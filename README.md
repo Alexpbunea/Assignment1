@@ -1,7 +1,7 @@
 # ASSIGNMENT 1
 -----------
 
-The code found on this respository tries to develop a solution for identifying the source tables of a database, given a question on natural language (NL). For it, takes advantage of two artifial intelligence models trained by Google: flan-T5-small and flan-T5-base. By fine-tuning them and, later, refining the ouputs, the obtained metrics using the 'dev set' as groudtruth are:
+The code found on this respository tries to develop a solution for identifying the source tables of a database, given a question on natural language (NL). For it, takes advantage of two artificial intelligence models trained by Google: flan-T5-small and flan-T5-base. By fine-tuning them and, later, refining the outputs, the metrics are calculated using the 'dev set' of the BIRD benchmark page as groudtruth are:
 - Flan-T5-small:
     - Accuracy: 0.5816601477618454
     - Precision: 0.7112906225918735
@@ -50,7 +50,7 @@ When selecting option number 2, generating, the program will ask you three quest
 
 Once finished answering those questions, the model will start to generate the outputs. Unfortunatly, the model tends to sometimes duplicate the ouput table, for example: ["schools", "schools"], which is undoubtivly wrong. That's when the refining takes place and makes sure there are no duplicates, that the tables are present in the database, and corrects, if needed, by similarity, their names, ex: ["scores"] ---> ["satscores"].
 
-[Note]: You can also execute the training directly by running `python run --action "generate"`. Also, please check the run.py code, the generating function, if you need to create the jsonl for the databases. When executed that part of code, the jsonl will be created with inputs and outputs. The inputs are only used when generating, and the outputs are the groundtruth for the evaluation part. With this approach, much time is saved, and the totally of the program is more simple.
+[Note]: You can also execute the training directly by running `python run --action "generate"`. Also, please check the run.py code, the generating function, if you need to create the jsonl for the databases. When executed that part of code, the jsonl will be created with inputs and outputs. The inputs are only used when generating, and the outputs are the groundtruth for the evaluation part. With this approach, much time is saved, and the totally of the program is more simple. Futhermore, if intented to use the T5 base model, please change the 'model's saved weights' path to './fine_tuned_t5_base', and be sure that the model is downloaded before.
 
 Another ilustration:
 

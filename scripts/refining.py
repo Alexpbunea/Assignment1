@@ -4,16 +4,8 @@ import re
 import ast
 from utils import *
 
-file_path = "./generated_outputs(2).jsonl"
-
 
 def check_similarity(item, candidate_lower):
-    """
-    Compara el output_value con los candidatos y devuelve True si hay coincidencia
-    o similitud suficiente, de lo contrario devuelve False.
-    """
-
-    # Buscar entre los candidatos aquel que tenga similitud >= 80%
     mejor_ratio = 0
     mejor_candidato = None
     for candidate in candidate_lower:
@@ -28,7 +20,6 @@ def check_similarity(item, candidate_lower):
 
 def refinining(raw_generated_outputs_path, refined_generated_outputs_path):
     with open(raw_generated_outputs_path, 'r', encoding='utf-8') as f:
-        # Leer cada línea y cargarla como un diccionario
         data = [json.loads(line) for line in f]
 
     final_jsonl = []
@@ -36,12 +27,11 @@ def refinining(raw_generated_outputs_path, refined_generated_outputs_path):
     for i in range(len(data)):
         registro = data[i]
         output_value = registro.get('output', '').lower().split(", ")
-        output_value = set(output_value) #delete duplicates
+        output_value = set(output_value) 
 
         input_text = registro.get('input', '')
 
-        #Looks for the original dataset tables in the input
-        match = re.search(r"Select table\(s\) from:\s*(\[.*\])", input_text)
+        match = re.search(r"Select table\(s\) from:\s*(\[.*\])", input_text) #checks for the tables in the input
         if match:
             table_list_str = match.group(1)
             try:
@@ -56,7 +46,6 @@ def refinining(raw_generated_outputs_path, refined_generated_outputs_path):
         candidate_lower = [str(elem).lower() for elem in candidate_list]
         #print(candidate_lower, " ---------- ", output_value)
         
-        
         new_output_value = []
         for item in output_value:
             if item not in candidate_lower:
@@ -64,7 +53,7 @@ def refinining(raw_generated_outputs_path, refined_generated_outputs_path):
                 if new_candidate: 
                     new_output_value.append(new_candidate)
             else:
-                new_output_value.append(item)  # Si ya está en candidate_lower, conservarlo
+                new_output_value.append(item)  
         
         registro['output'] = new_output_value
         final_jsonl.append(registro)

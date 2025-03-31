@@ -177,6 +177,7 @@ cython_debug/
 #Not important folders
 /dev
 /results
+/logs
 
 #Not important files
 ds.py
