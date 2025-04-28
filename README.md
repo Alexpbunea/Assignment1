@@ -1,4 +1,4 @@
-# ASSIGNMENT 1
+# SOURCE TABLES IDENTIFIER
 -----------
 
 The code found on this respository tries to develop a solution for identifying the source tables of a database, given a question on natural language (NL). For it, takes advantage of two artificial intelligence models trained by Google: flan-T5-small and flan-T5-base. By fine-tuning them and, later, refining the outputs, the metrics are calculated using the 'dev set' of the BIRD benchmark page as groudtruth are:
